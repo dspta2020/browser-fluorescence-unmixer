@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV Processing Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <h1>CSV Processing Tool</h1>
+        <p>Upload component data and test data:</p>
+        
+        <label for="component_data">Component Data:</label>
+        <input type="file" id="component_data" accept=".csv">
+
+        <p></p>
+
+        <label for="test_data">Test Data:</label>
+        <input type="file" id="test_data" accept=".csv">
+
+        <p></p>
+        <button id="processButton">Process CSVs</button>
+
+        <p id="status"></p>
+    </div>
+
+    <script>
+        document.getElementById('processButton').addEventListener('click', () => {
+            const componentFile = document.getElementById('component_data').files[0];
+            const testFile = document.getElementById('test_data').files[0];
+            
+            if (componentFile && testFile) {
+
+
+
+            } else {
+                document.getElementById('status').innerText = "Please select both files!";
+            }
+        });
+
+    </script>
+
+</body>
+</html>
